@@ -6,7 +6,7 @@
 
 body {
   font-family: "Arial", sans-serif;
-  background-color: #f5e6d3;
+  background-color: #ebd5c8;
   overflow-x: hidden;
 }
 
@@ -158,7 +158,8 @@ body {
   align-items: center;
   justify-content: center;
   background-size: cover;
-  background-position: center;
+  background-position: -800px -300px;
+  background-size: cover;
 }
 .hero-image {
   align-items: center;
