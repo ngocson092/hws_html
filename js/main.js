@@ -53,8 +53,74 @@ document.addEventListener("DOMContentLoaded", () => {
           behavior: "smooth",
         })
       }
+      })
+  
+  // Scroll animations for all sections
+  const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -50px 0px'
+  }
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate')
+      }
     })
+  }, observerOptions)
+  
+  // Observe all sections
+  const sections = [
+    '.hero',
+    '.services', 
+    '.pain-free',
+    '.membership',
+    '.testimonials',
+    '.careers',
+    '.booking'
+  ]
+  
+  sections.forEach(selector => {
+    const element = document.querySelector(selector)
+    if (element) observer.observe(element)
   })
+  
+  // Observe pain-free elements
+  const painFreeText = document.querySelector('.pain-free-text')
+  const painFreeImage = document.querySelector('.pain-free-image')
+  
+  if (painFreeText) observer.observe(painFreeText)
+  if (painFreeImage) observer.observe(painFreeImage)
+
+  // Initialize Swiper for testimonials
+  const testimonialsSwiper = new Swiper('.testimonials-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+    },
+  })
+})
 
   // Mobile slide menu logic
   const mobileMenu = document.querySelector('.menu-mobile')
