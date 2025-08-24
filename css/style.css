@@ -1317,7 +1317,7 @@ body {
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   margin-bottom: 60px;
 }
@@ -1327,11 +1327,12 @@ body {
 }
 
 .footer-title {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 25px;
   color: #f5e6d3;
   position: relative;
+  letter-spacing: 1px;
 }
 
 .footer-title::after {
@@ -1356,10 +1357,11 @@ body {
 
 .footer-links a {
   color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  font-size: 1rem;
+  text-decoration: underline;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
   position: relative;
+  font-family: "Arial", sans-serif;
 }
 
 .footer-links a:hover {
@@ -1371,8 +1373,10 @@ body {
   border-top: 1px solid rgba(245, 230, 211, 0.3);
   padding-top: 40px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  gap: 15px;
 }
 
 .footer-logo h2 {
@@ -1385,6 +1389,18 @@ body {
 .footer-logo p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.9rem;
+}
+
+.footer-address p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  font-family: "Arial", sans-serif;
+}
+
+.footer-legal p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  font-family: "Arial", sans-serif;
 }
 
 .footer-legal p {
