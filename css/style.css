@@ -1414,7 +1414,7 @@ body {
 @media (max-width: 768px) {
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 0;
     text-align: center;
   }
 
@@ -1426,21 +1426,33 @@ body {
     height: 200px;
   }
 
-  /* Thu gọn khoảng cách để nội dung sát lên dưới header trên mobile */
+  /* Mobile hero layout */
   .hero {
     min-height: auto;
+    margin-top: 200px;
   }
+  
   .hero-image {
-    min-height: 60vh;
+    min-height: 50vh;
+    order: 1;
   }
+  
+  .hero-text {
+    min-height: 50vh;
+    order: 2;
+    background-position: center center;
+  }
+  
   .hero-image .section-border {
     -webkit-clip-path: none;
     clip-path: none;
   }
+  
   .hero-image img {
     -webkit-clip-path: url("#section-divider-60835c9581b62d0a311fc0fd");
     clip-path: url("#section-divider-60835c9581b62d0a311fc0fd");
     object-position: 50% 18%;
+    height: 100%;
   }
 
   .menu-content {
@@ -1735,8 +1747,25 @@ body {
 
 /* Small mobile devices */
 @media (max-width: 480px) {
+  .hero {
+    margin-top: 0px;
+  }
+  
   .hero-text h1 {
     font-size: 2rem;
+  }
+  
+  .hero-image {
+    min-height: 40vh;
+    margin-top: 80px;
+  }
+  
+  .hero-text {
+    min-height: 25vh;
+  }
+  
+  .hero-text .script {
+    font-size: 1.5rem;
   }
   
   .services {
