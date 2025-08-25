@@ -1,27 +1,27 @@
 // FAQ Page JavaScript
 
 // FAQ Accordion Functionality
-function toggleFAQ(button) {
-  const faqItem = button.parentElement;
-  const answer = faqItem.querySelector('.faq-answer');
-  const icon = button.querySelector('.faq-icon');
-  
-  // Close all other FAQ items
-  const allFaqItems = document.querySelectorAll('.faq-item');
-  allFaqItems.forEach(item => {
-    if (item !== faqItem) {
+function toggleFAQ(target) {
+  // Support both old structure (.faq-item > .faq-question) and new rows (.faq-row)
+  const isRow = target.classList.contains('faq-row');
+  const container = isRow ? target : target.parentElement;
+  const selector = isRow ? '.faq-row' : '.faq-item';
+
+  // Close all others of the same type
+  const allItems = document.querySelectorAll(selector);
+  allItems.forEach(item => {
+    if (item !== container) {
       item.classList.remove('active');
     }
   });
-  
-  // Toggle current FAQ item
-  faqItem.classList.toggle('active');
-  
-  // Update icon
-  if (faqItem.classList.contains('active')) {
-    icon.textContent = '−';
-  } else {
-    icon.textContent = '+';
+
+  // Toggle current
+  container.classList.toggle('active');
+
+  // Update plus/minus icon for old structure if present
+  const icon = isRow ? null : target.querySelector('.faq-icon');
+  if (icon) {
+    icon.textContent = container.classList.contains('active') ? '−' : '+';
   }
 }
 
@@ -46,11 +46,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Add keyboard navigation for FAQ items
+  // Add keyboard navigation for old + new items
   const faqQuestions = document.querySelectorAll('.faq-question');
-  
   faqQuestions.forEach(question => {
     question.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleFAQ(this);
+      }
+    });
+  });
+
+  const faqRows = document.querySelectorAll('.faq-row');
+  faqRows.forEach(row => {
+    row.addEventListener('keydown', function(e) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         toggleFAQ(this);

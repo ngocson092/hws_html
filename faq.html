@@ -73,149 +73,95 @@
       </nav>
     </header>
 
-    <!-- FAQ Hero Section -->
-    <section class="faq-hero">
-      <div class="faq-hero-container">
-        <h1 class="faq-hero-title">
-          Frequently Asked<br />
-          <span class="script">Questions</span>
-        </h1>
-        <p class="faq-hero-subtitle">
-          Everything you need to know about waxing, sugaring, and our services
-        </p>
-      </div>
-    </section>
-
-    <!-- FAQ Content Section -->
-    <section class="faq-content">
-      <div class="faq-container">
-        <div class="faq-grid">
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)">
-              <span>WHAT IS A BRAZILIAN WAX? HOW IS IT DIFFERENT FROM A REGULAR BIKINI WAX?</span>
-              <div class="faq-icon">+</div>
-            </button>
-            <div class="faq-answer">
-              <p>A Brazilian wax is the removal of all the hair in your private regions – that includes the labia (if you're a woman) and peri-anal areas as well. At your request, we can even give you a variation called the "playboy wax", where a shape or strip is left on the front! It is different from a bikini wax in that the latter only includes removal of hair that would be visible within the bounds of a swimsuit bottom.</p>
+    <!-- FAQ (new single section: banner + expandable list) -->
+    <section class="faq-section">
+      <div class="faq-wrapper">
+        <div class="faq-grid-new">
+          <div class="faq-banner">
+            <img src="images/pain-free-woman.jpg" alt="FAQs" />
+            <div class="faq-banner-overlay">
+              <h2 class="faq-title">FAQs</h2>
+              <div class="faq-banner-center">
+                <p>Everything you need to know before a visit to Hollywood Waxing Studio.</p>
+                <button class="faq-banner-btn">BOOK NOW</button>
+              </div>
             </div>
           </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)">
-              <span>HOW LONG DOES THE HAIR HAVE TO BE?</span>
-              <div class="faq-icon">+</div>
-            </button>
-            <div class="faq-answer">
-              <p>To make sure you leave our salon baby smooth, it's best to allow for ¼ of an inch length, or about 3-4 weeks worth of growth. We know it's difficult but please refrain from shaving or trimming between visits – it's important to let the hairs grow in an even cycle.</p>
+          <div class="faq-list">
+            <div class="faq-row" onclick="toggleFAQ(this)" tabindex="0">
+              <div class="faq-row-left">
+                <span class="faq-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7h16M6 7v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7" stroke="#a27a3f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 7V5a3 3 0 0 1 6 0v2" stroke="#a27a3f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="faq-row-text">Waxing Basics</span>
+              </div>
+              <span class="chevron">›</span>
+              <div class="faq-row-content">
+                <p>Brazilian vs Bikini differences, ideal hair length (~1/4 inch), discomfort eases with consistent visits, and average regrowth takes 3–5 weeks.</p>
+              </div>
             </div>
-          </div>
 
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)">
-              <span>DOES WAXING HURT?</span>
-              <div class="faq-icon">+</div>
-            </button>
-            <div class="faq-answer">
-              <p>Our trained estheticians use proven and effective techniques to make sure your wax experience is as painless as possible. Of course, you may experience a little discomfort depending on your hair thickness, sensitivity and the area of your body you are waxing. The good news is that once you start waxing on a regular basis, your hairs thin out, making them much easier to remove. After just a few sessions, you'll be surprised at how much gentler and faster the process becomes.</p>
+            <div class="faq-row" onclick="toggleFAQ(this)" tabindex="0">
+              <div class="faq-row-left">
+                <span class="faq-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v18M3 12h18" stroke="#a27a3f" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </span>
+                <span class="faq-row-text">Special Treatments</span>
+              </div>
+              <span class="chevron">›</span>
+              <div class="faq-row-content">
+                <p>30‑minute Vajacial: cleanse, exfoliate, treat ingrowns, soothing mask and hydration. Suitable for all skin types; recommended 3 days after a wax.</p>
+              </div>
             </div>
-          </div>
 
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)">
-              <span>HOW LONG BEFORE THE HAIR STARTS GROWING BACK?</span>
-              <div class="faq-icon">+</div>
-            </button>
-            <div class="faq-answer">
-              <p>Truthfully, there is no exact answer for this because everyone's hair grows back at different lengths, rates and cycles. On average, hair starts growing back in about 3-5 weeks.</p>
+            <div class="faq-row" onclick="toggleFAQ(this)" tabindex="0">
+              <div class="faq-row-left">
+                <span class="faq-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3" stroke="#a27a3f" stroke-width="1.6"/><path d="M2 12h4M18 12h4M12 2v4M12 18v4" stroke="#a27a3f" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </span>
+                <span class="faq-row-text">Brows & Lashes</span>
+              </div>
+              <span class="chevron">›</span>
+              <div class="faq-row-content">
+                <p>Brow Lamination redirects brow hair for a fuller look; lasts around 4–6 weeks.</p>
+              </div>
             </div>
-          </div>
 
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)">
-              <span>WHO SHOULD WAX?</span>
-              <div class="faq-icon">+</div>
-            </button>
-            <div class="faq-answer">
-              <p>Being well maintained is an awesome confident booster! That's why everyone – men and women of any age can wax. Brazilian waxing is even safe for pregnant women. Just make sure you fill out our consent form so we can double-check your medical history and sensitivities.</p>
+            <div class="faq-row" onclick="toggleFAQ(this)" tabindex="0">
+              <div class="faq-row-left">
+                <span class="faq-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0Z" stroke="#a27a3f" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="#a27a3f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span class="faq-row-text">Before & After Care</span>
+              </div>
+              <span class="chevron">›</span>
+              <div class="faq-row-content">
+                <p>Before: let hair grow evenly and avoid shaving for 3–4 weeks. After: avoid heat/sun for 24–48 hours, moisturize, and gently exfoliate.</p>
+              </div>
             </div>
-          </div>
 
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)">
-              <span>WHAT IS VAJACIAL? WHO/WHEN SHOULD GET IT?</span>
-              <div class="faq-icon">+</div>
-            </button>
-            <div class="faq-answer">
-              <p>A vajacial is a skincare treatment for women's intimate parts. The 30-minute service treats ingrown hairs, removes dead skin cells, smooths bumps around bikini line, prevents acne, helps with hyperpigmentation, all to maintain healthy and hydrated skin in the vaginal area. First, we assess, steam, and cleanse your skin, then we exfoliate and perform extractions if needed. It is finished off with a hydrating mask and moisturizer. This treatment is appropriate for all skin types, including sensitive skin, and we recommend booking the service 3 days after a wax.</p>
+            <div class="faq-row" onclick="toggleFAQ(this)" tabindex="0">
+              <div class="faq-row-left">
+                <span class="faq-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#a27a3f" stroke-width="1.6"/><path d="M3 10h18" stroke="#a27a3f" stroke-width="1.6"/><circle cx="8" cy="15" r="1" fill="#a27a3f"/><circle cx="12" cy="15" r="1" fill="#a27a3f"/><circle cx="16" cy="15" r="1" fill="#a27a3f"/></svg>
+                </span>
+                <span class="faq-row-text">Payments & Policies</span>
+              </div>
+              <span class="chevron">›</span>
+              <div class="faq-row-content">
+                <p>Flexible booking, cancellation, and payment policies. Contact us for current details at the time of booking.</p>
+              </div>
             </div>
-          </div>
 
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)">
-              <span>DO YOU WAX MEN?</span>
-              <div class="faq-icon">+</div>
-            </button>
-            <div class="faq-answer">
-              <p>Definitely! We understand that manscaping is just as important as ladyscaping. That's why we offer our full range of services, including the "brozilian", to the impeccably groomed men of the world.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)">
-              <span>WHAT AREAS OF MY BODY ARE WAXABLE?</span>
-              <div class="faq-icon">+</div>
-            </button>
-            <div class="faq-answer">
-              <p>We provide full body waxing services from brows to Brazilian. Your friendly, experienced esthetician is happy to answer any specific questions or address any concerns that you might have.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)">
-              <span>HOW OFTEN SHOULD I WAX?</span>
-              <div class="faq-icon">+</div>
-            </button>
-            <div class="faq-answer">
-              <p>We suggest waxing every 4-5 weeks. Once you start a waxing routine and stick with it, you'll love how clean and silky your skin will look and feel.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)">
-              <span>WHAT IS BROW LAMINATION?</span>
-              <div class="faq-icon">+</div>
-            </button>
-            <div class="faq-answer">
-              <p>Brow lamination is a noninvasive, semipermanent that alters the direction of your eyebrows, similar to microbalding but with no pigment added to your brow. It adjusts the natural brow pattern and achieves a fuller look. The procedure takes about 30-45 minutes. You walk out with healthy fuller-looking brows.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)">
-              <span>HOW LONG DOES BROW LAMINATION LAST?</span>
-              <div class="faq-icon">+</div>
-            </button>
-            <div class="faq-answer">
-              <p>Typically, eyebrow lamination lasts four to six weeks.</p>
+            <div class="faq-help">
+              <p>Ready to book your next wax? We’re here to make your experience smooth, comfortable, and stress‑free.</p>
+              <button class="faq-help-btn">CONTACT US</button>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- CTA Section -->
-    <section class="faq-cta">
-      <div class="faq-cta-container">
-        <h2 class="faq-cta-title">Ready to book your appointment?</h2>
-        <p class="faq-cta-description">
-          Still have questions? Our friendly team is here to help!
-        </p>
-        <div class="faq-cta-buttons">
-          <button class="faq-cta-primary">Book Online</button>
-          <button class="faq-cta-secondary">Contact Us</button>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- Footer -->
     <footer class="footer">
